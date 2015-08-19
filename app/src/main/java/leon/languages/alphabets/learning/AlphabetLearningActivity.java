@@ -2,22 +2,37 @@ package leon.languages.alphabets.learning;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.fragment.DisplayFragment;
+import leon.languages.alphabets.listview.CustomDrawerListViewAdapter;
 import leon.languages.alphabets.others.CommonConstants;
 
 public class AlphabetLearningActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = AlphabetLearningActivity.class.getSimpleName();
 
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabetlearningactivity);
+
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_learning_activity);
+        mDrawerList = (ListView) findViewById(R.id.left_drawer_learning_activity);
+        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+        mDrawerList.setAdapter(new CustomDrawerListViewAdapter(getApplicationContext()));
+        mDrawerList.setOnItemClickListener(new LearningDrawerItemClickListener());
 
         String languageIdentifier = getIntent().getStringExtra(CommonConstants.LANGUAGE_IDENTIFER);
         if (languageIdentifier != "") {
@@ -27,9 +42,18 @@ public class AlphabetLearningActivity extends AppCompatActivity {
         }
     }
 
+    private class LearningDrawerItemClickListener implements ListView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            displayFragment(LanguageInfo.LANGUAGE_NAME_IDENTIFIERS[position]);
+        }
+    }
+
     private void displayFragment(String languageIdentifier) {
         DisplayFragment displayFragment1 = new DisplayFragment();
         Bundle args1 = new Bundle();
+        // todo: deal with null
         DisplayFragment displayFragment2 = new DisplayFragment();
         Bundle args2 = new Bundle();
         switch (languageIdentifier) {
@@ -139,8 +163,8 @@ public class AlphabetLearningActivity extends AppCompatActivity {
         displayFragment2.setArguments(args2);
 
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.container1, displayFragment1);
-        fragmentTransaction.replace(R.id.container2, displayFragment2);
+        fragmentTransaction.replace(R.id.container, displayFragment1);
+//        fragmentTransaction.replace(R.id.container2, displayFragment2);
         fragmentTransaction.commit();
     }
 }

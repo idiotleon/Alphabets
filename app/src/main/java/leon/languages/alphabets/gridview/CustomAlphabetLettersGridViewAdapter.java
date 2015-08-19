@@ -15,7 +15,6 @@ public class CustomAlphabetLettersGridViewAdapter extends BaseAdapter {
     private Context context;
     private String[] alphabetLetters;
 
-
     public CustomAlphabetLettersGridViewAdapter(Context context, String[] alphabetLetters) {
         this.context = context;
         this.alphabetLetters = alphabetLetters;
