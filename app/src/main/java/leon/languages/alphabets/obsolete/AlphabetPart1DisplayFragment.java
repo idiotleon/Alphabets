@@ -1,4 +1,4 @@
-package leon.languages.alphabets.gridview;
+package leon.languages.alphabets.obsolete;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +16,15 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import leon.languages.alphabets.CommonConstants;
+import leon.languages.alphabets.others.CommonConstants;
 import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.R;
+import leon.languages.alphabets.gridview.CustomAlphabetLettersGridViewAdapter;
 import leon.languages.alphabets.multimedia.PlayAudioService;
 
-public class GridViewFragment extends Fragment {
+public class AlphabetPart1DisplayFragment extends Fragment {
 
-    private static String LOG_TAG = GridViewFragment.class.getSimpleName();
+    private static String LOG_TAG = AlphabetPart1DisplayFragment.class.getSimpleName();
 
     private static int ALPHABET_PART1 = 1;
     private static int ALPHABET_PART2 = 2;
@@ -46,7 +46,7 @@ public class GridViewFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        String languageIdentifier = getArguments().getString(CommonConstants.FRAGMENT_LANGUAGE_IDENTIFER);
+        String languageIdentifier = getArguments().getString(CommonConstants.LANGUAGE_IDENTIFER);
 
         View fragmentView = inflater.inflate(R.layout.fragment_gridview, container, false);
         TextView textView1 = (TextView) fragmentView.findViewById(R.id.textview1_fragment_gridview);
@@ -177,7 +177,7 @@ public class GridViewFragment extends Fragment {
 
 
         customGridViewAdapter = new CustomAlphabetLettersGridViewAdapter(getActivity(), alphabetLetters1);
-//        Log.v(LOG_TAG, "getArguments().getString(CommonConstants.FRAGMENT_LANGUAGE_IDENTIFER): " + getArguments().getString(CommonConstants.FRAGMENT_LANGUAGE_IDENTIFER));
+//        Log.v(LOG_TAG, "getArguments().getString(CommonConstants.LANGUAGE_IDENTIFER): " + getArguments().getString(CommonConstants.LANGUAGE_IDENTIFER));
 
         gridView1.setAdapter(customGridViewAdapter);
         gridView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {

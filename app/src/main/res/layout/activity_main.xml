@@ -55,7 +55,6 @@
                 android:layout_below="@id/btn_score_mainactivity"
                 android:layout_centerHorizontal="true"
                 android:text="@string/btn_exit_mainactivity_text" />
-
         </RelativeLayout>
     </FrameLayout>
 

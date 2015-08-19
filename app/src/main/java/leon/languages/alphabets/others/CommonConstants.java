@@ -1,4 +1,4 @@
-package leon.languages.alphabets;
+package leon.languages.alphabets.others;
 
 public class CommonConstants {
 
@@ -7,10 +7,14 @@ public class CommonConstants {
     //    public static String[] LANGUAGE_NAME_IDENTIFIERS = context.getResources().getStringArray(R.array.languageNamesInEnglish);
 
 
-    public static String FRAGMENT_LANGUAGE_IDENTIFER = "text";
+    public static String LANGUAGE_IDENTIFER = "langauge";
     public static String IMAGE_URL = "imageUrl";
     public static String IMAGE_URL_ARRAY = "imageUrlArray";
 
     // String used as Extras to pass audio identifier data from fragment to PlayAudioService
     public static String ITEM_SELECTED_AUDIO_URL = "itemSelectedName";
+
+    public static String ALPHABET_LETTER_IDENTIFIER = "alphabet_letter";
+    public static String ALPHABET_LETTER_AUDIO_IDENTIFIER = "alphabet_audio";
+    public static String ALPHABET_FRAGMENT_TITLE_IDENTIFIER = "alphabet_title";
 }
