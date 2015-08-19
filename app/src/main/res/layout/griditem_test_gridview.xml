@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageview_griditem_test_gridview"
+        android:layout_width="180sp"
+        android:layout_height="120sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textview_griditem_test_gridview"
+        android:layout_width="180sp"
+        android:layout_height="30sp"
+        android:layout_below="@id/imageview_griditem_test_gridview"
+        android:gravity="center" />
+
+</RelativeLayout>

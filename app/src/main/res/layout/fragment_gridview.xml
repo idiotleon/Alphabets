@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview1_fragment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/textview1_fragment_gridview"
+        android:textSize="18sp" />
+
+    <GridView
+        android:id="@+id/gridview1_fragment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:keepScreenOn="true"
+        android:numColumns="5"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp"></GridView>
+
+    <TextView
+        android:id="@+id/textview2_fragment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/textview2_fragment_gridview"
+        android:textSize="18sp" />
+
+    <GridView
+        android:id="@+id/gridview2_fragment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:keepScreenOn="true"
+        android:numColumns="5"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp"></GridView>
+
+    <TextView
+        android:id="@+id/textview3_fragment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/textview2_fragment_gridview"
+        android:textSize="18sp" />
+
+    <GridView
+        android:id="@+id/gridview3_fragment_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:keepScreenOn="true"
+        android:numColumns="5"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp"></GridView>
+</LinearLayout>

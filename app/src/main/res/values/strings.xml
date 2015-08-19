@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Alphabets</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="textview1_fragment_gridview">Vowels</string>
+    <string name="textview2_fragment_gridview">Consonants</string>
+    <string name="japanese_hiragana">平仮名</string>
+    <string name="japanese_katagana">片仮名</string>
+
+    <string name="btn_start_mainactivity_text">Start Learning Alphabet</string>
+    <string name="btn_test_mainactivity_text">Take a Test</string>
+    <string name="btn_review_mainactivity_text">Review Words</string>
+    <string name="btn_score_mainactivity_text">Score Board</string>
+    <string name="btn_exit_mainactivity_text">Exit</string>
+
+    <string name="custom_dialog_box_title">How to write:</string>
+
+    <string name="textview_test_activity_text">Welcome to Test Center</string>
+
+    <string name="checkbox_dialog_box_basic_info_text">No need to be displayed.</string>
+
+    <string-array name="languageNamesInNative">
+        <item>
+            العربية
+        </item>
+        <item>
+            Deutsch
+        </item>
+        <item>
+            English
+        </item>
+        <item>
+            Español
+        </item>
+        <item>
+            Français
+        </item>
+        <item>
+            Ελληνικά
+        </item>
+        <item>
+            한국어
+        </item>
+        <item>
+           हिंढी
+        </item>
+        <item>
+            日本語
+        </item>
+        <item>
+            Pусский
+        </item>
+        <item>
+            中文(简体)
+        </item>
+        <item>
+            中文(繁体)
+        </item>
+    </string-array>
+
+    <string-array name="languageNamesInEnglish">
+        <item>
+            Arabic
+        </item>
+        <item>
+            German
+        </item>
+        <item>
+            English
+        </item>
+        <item>
+            Spanish
+        </item>
+        <item>
+            French
+        </item>
+        <item>
+            Greek
+        </item>
+        <item>
+            Korean
+        </item>
+        <item>
+           Hindi
+        </item>
+        <item>
+            Japanese
+        </item>
+        <item>
+            Russian
+        </item>
+        <item>
+            SimplifiedChinese
+        </item>
+        <item>
+            TraditionalChinese
+        </item>
+    </string-array>
+
+
+</resources>
