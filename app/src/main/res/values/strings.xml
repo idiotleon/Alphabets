@@ -7,11 +7,15 @@
     <string name="japanese_hiragana">平仮名</string>
     <string name="japanese_katagana">片仮名</string>
 
-    <string name="btn_start_mainactivity_text">Start Learning Alphabet</string>
-    <string name="btn_test_mainactivity_text">Take a Test</string>
-    <string name="btn_review_mainactivity_text">Review Words</string>
-    <string name="btn_score_mainactivity_text">Score Board</string>
+    <string name="btn_start_mainactivity_text">Start</string>
+    <string name="btn_test_mainactivity_text">Test</string>
+    <string name="btn_review_mainactivity_text">Reviews</string>
+    <string name="btn_score_mainactivity_text">Score</string>
     <string name="btn_exit_mainactivity_text">Exit</string>
+
+    <string name="menu_alphabet_part1">Uppercase</string>
+    <string name="menu_alphabet_part2">Lowercase</string>
+    <string name="menu_alphabet_part3">Alphabet Part3</string>
 
     <string name="custom_dialog_box_title">How to write:</string>
 

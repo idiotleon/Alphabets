@@ -17,4 +17,7 @@ public class CommonConstants {
     public static String ALPHABET_LETTER_IDENTIFIER = "alphabet_letter";
     public static String ALPHABET_LETTER_AUDIO_IDENTIFIER = "alphabet_audio";
     public static String ALPHABET_FRAGMENT_TITLE_IDENTIFIER = "alphabet_title";
+
+    public static int ALPHABET_PART1_IDENTIFIER = 1;
+    public static int ALPHABET_PART2_IDENTIFIER = 3;
 }

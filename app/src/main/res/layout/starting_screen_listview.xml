@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/drawer_layout_learning_activity"
+    android:id="@+id/drawer_layout_startingscreenlistview"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <FrameLayout
-        android:id="@+id/container"
+        android:id="@+id/content_frame_startingscreenlistview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"></FrameLayout>
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview_options_startingscreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </FrameLayout>
 
     <ListView
-        android:id="@+id/left_drawer_learning_activity"
+        android:id="@+id/left_drawer_startingscreenlistview"
         android:layout_width="180dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"

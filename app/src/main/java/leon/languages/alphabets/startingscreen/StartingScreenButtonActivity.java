@@ -1,9 +1,9 @@
-package leon.languages.alphabets.others;
+package leon.languages.alphabets.startingscreen;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,8 +16,9 @@ import android.widget.Toast;
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.learning.AlphabetLearningActivity;
-import leon.languages.alphabets.listview.CustomDrawerListViewAdapter;
+import leon.languages.alphabets.leftdrawer.CustomDrawerListViewAdapter;
 import leon.languages.alphabets.multimedia.PlayAudioService;
+import leon.languages.alphabets.others.CommonConstants;
 import leon.languages.alphabets.test.AlphabetTestActivity;
 
 /**
@@ -25,14 +26,14 @@ import leon.languages.alphabets.test.AlphabetTestActivity;
  * 2. 加入生词本(数据库(怎么设计数据库))
  * 3. OAuth & Save Progress in Cloud: icon of OAuth social account on top of side navigation bar
  * 5. ActionBar with icon
- * <p/>
- * <p/>
+ * <p>
+ * <p>
  * Error:
  * 1. Side Navigation Bar: 新生成的Fragment会叠加到原有的Fragment上
  */
-public class MainActivity extends AppCompatActivity {
+public class StartingScreenButtonActivity extends Activity {
 
-    private static String LOG_TAG = MainActivity.class.getSimpleName();
+    private static String LOG_TAG = StartingScreenButtonActivity.class.getSimpleName();
 
     // Todo: drawer slided with animations, such as with bright shine
     private DrawerLayout mDrawerLayout;
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.starting_screen_buttons);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_main_activity);
         mDrawerList = (ListView) findViewById(R.id.left_drawer_main_activity);
@@ -56,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setAdapter(new CustomDrawerListViewAdapter(getApplicationContext()));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getActionBar().setHomeButtonEnabled(true);
 
         btnStart = (Button) findViewById(R.id.btn_start_mainactivity);
         btnTest = (Button) findViewById(R.id.btn_test_mainactivity);
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Please select a language", Toast.LENGTH_SHORT).show();
+                Toast.makeText(StartingScreenButtonActivity.this, "Please select a languageName", Toast.LENGTH_SHORT).show();
                 mDrawerLayout.openDrawer(GravityCompat.START);
             }
         });
@@ -76,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Test Capabilities is being added", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainActivity.this, AlphabetTestActivity.class);
+                Toast.makeText(StartingScreenButtonActivity.this, "Test Capabilities is being added", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(StartingScreenButtonActivity.this, AlphabetTestActivity.class);
                 startActivity(intent);
             }
         });
@@ -85,14 +86,14 @@ public class MainActivity extends AppCompatActivity {
         btnReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Review Capabilities will be added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(StartingScreenButtonActivity.this, "Review Capabilities will be added", Toast.LENGTH_SHORT).show();
             }
         });
 
         btnScore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Score board will be added", Toast.LENGTH_SHORT).show();
+                Toast.makeText(StartingScreenButtonActivity.this, "Score board will be added", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Service is terminated
-                stopService(new Intent(MainActivity.this, PlayAudioService.class));
+                stopService(new Intent(StartingScreenButtonActivity.this, PlayAudioService.class));
                 finish();
             }
         });
@@ -138,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            Intent intent = new Intent(MainActivity.this, AlphabetLearningActivity.class);
+            Intent intent = new Intent(StartingScreenButtonActivity.this, AlphabetLearningActivity.class);
             intent.putExtra(CommonConstants.LANGUAGE_IDENTIFER, LanguageInfo.LANGUAGE_NAME_IDENTIFIERS[position]);
             startActivity(intent);
         }
@@ -147,6 +148,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        stopService(new Intent(MainActivity.this, PlayAudioService.class));
+        stopService(new Intent(StartingScreenButtonActivity.this, PlayAudioService.class));
     }
 }

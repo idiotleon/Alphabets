@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="E:\Downloads\Github\Alphabets\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="E:\Downloads\Github\Alphabets\app\build\intermediates\pre-dexed\debug\classes-236451c8c95417572e65e7aa337c5c8eff421b10.jar" />
-    </item>
-    <item
         jar="E:\Software\Matrix\Android\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="22.0.0"
@@ -23,6 +16,13 @@
         <dex dex="E:\Downloads\Github\Alphabets\app\build\intermediates\pre-dexed\debug\classes-2de8da7387f1acfaa3671091f82a7f092df04150.jar" />
     </item>
     <item
+        jar="E:\Downloads\Github\Alphabets\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="E:\Downloads\Github\Alphabets\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-2d2e5cec25045cfa13988cd8d31ecb7351cd97b5.jar" />
+    </item>
+    <item
         jar="E:\Downloads\Github\Alphabets\app\libs\ion-1.0.9.jar"
         jumboMode="false"
         revision="22.0.0"
@@ -30,11 +30,11 @@
         <dex dex="E:\Downloads\Github\Alphabets\app\build\intermediates\pre-dexed\debug\ion-1.0.9-f804c982562b123664630cbb291c8c93424a198b.jar" />
     </item>
     <item
-        jar="E:\Downloads\Github\Alphabets\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jar="E:\Downloads\Github\Alphabets\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
         jumboMode="false"
         revision="22.0.0"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="E:\Downloads\Github\Alphabets\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.1-2d2e5cec25045cfa13988cd8d31ecb7351cd97b5.jar" />
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="E:\Downloads\Github\Alphabets\app\build\intermediates\pre-dexed\debug\classes-236451c8c95417572e65e7aa337c5c8eff421b10.jar" />
     </item>
 
 </items>
