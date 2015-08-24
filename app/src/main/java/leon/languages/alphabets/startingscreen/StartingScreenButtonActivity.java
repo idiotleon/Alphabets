@@ -18,7 +18,7 @@ import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.learning.AlphabetLearningActivity;
 import leon.languages.alphabets.leftdrawer.CustomDrawerListViewAdapter;
 import leon.languages.alphabets.multimedia.PlayAudioService;
-import leon.languages.alphabets.others.CommonConstants;
+import leon.languages.alphabets.helper.CommonConstants;
 import leon.languages.alphabets.test.AlphabetTestActivity;
 
 /**

@@ -1,4 +1,4 @@
-package leon.languages.alphabets.others;
+package leon.languages.alphabets.helper;
 
 public class CommonConstants {
 

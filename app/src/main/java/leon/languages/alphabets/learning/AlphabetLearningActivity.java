@@ -17,7 +17,7 @@ import android.widget.ListView;
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.leftdrawer.CustomDrawerListViewAdapter;
-import leon.languages.alphabets.others.CommonConstants;
+import leon.languages.alphabets.helper.CommonConstants;
 
 public class AlphabetLearningActivity extends FragmentActivity {
 
@@ -25,7 +25,6 @@ public class AlphabetLearningActivity extends FragmentActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
-
     private String languageIdentifier;
 
     @Override
@@ -79,6 +78,7 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.arabicAlphabetWithDifferentForms);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Arabic Alphabet Letters");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Arabic");
                     getActionBar().setSubtitle("Different forms of Arabic Alphabet");
                     break;
                 case "English":
@@ -143,7 +143,7 @@ public class AlphabetLearningActivity extends FragmentActivity {
 //                detailedInfoUrl = "https://en.wikipedia.org/wiki/Hangul";
                     break;
                 case "Russian":
-                    args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.russianAlphabetLowercase);
+                    args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.russianAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Russian Alphabet Uppercase");
                     getActionBar().setSubtitle("Uppercaset");
@@ -224,7 +224,7 @@ public class AlphabetLearningActivity extends FragmentActivity {
 //                detailedInfoUrl = "https://en.wikipedia.org/wiki/Hangul";
                     break;
                 case "Russian":
-                    args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.russianConsonantLetters);
+                    args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.russianAlphabetLowercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Russian Alphabet Lowercase");
                     getActionBar().setSubtitle("Lowercase");
@@ -244,10 +244,10 @@ public class AlphabetLearningActivity extends FragmentActivity {
         }
     }
 
-    private void setBackgroundImage(int headerImageId, int backgroundImageId, int alphabDegree) {
+    private void setBackgroundImage(int headerImageId, int backgroundImageId, int alphaDegree) {
         getActionBar().setBackgroundDrawable(getResources().getDrawable(headerImageId));
         Drawable background = getResources().getDrawable(backgroundImageId);
-        background.setAlpha(alphabDegree);
+        background.setAlpha(alphaDegree);
         mDrawerLayout.setBackground(background);
     }
 
@@ -271,6 +271,4 @@ public class AlphabetLearningActivity extends FragmentActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

@@ -13,7 +13,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import leon.languages.alphabets.others.CommonConstants;
+import leon.languages.alphabets.helper.CommonConstants;
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.gridview.CustomAlphabetLettersGridViewAdapter;

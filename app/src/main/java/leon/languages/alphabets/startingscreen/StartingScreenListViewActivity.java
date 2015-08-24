@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,7 +18,7 @@ import leon.languages.alphabets.database.LanguageInfo;
 import leon.languages.alphabets.learning.AlphabetLearningActivity;
 import leon.languages.alphabets.leftdrawer.CustomDrawerListViewAdapter;
 import leon.languages.alphabets.multimedia.PlayAudioService;
-import leon.languages.alphabets.others.CommonConstants;
+import leon.languages.alphabets.helper.CommonConstants;
 import leon.languages.alphabets.test.AlphabetTestActivity;
 
 public class StartingScreenListViewActivity extends Activity {
