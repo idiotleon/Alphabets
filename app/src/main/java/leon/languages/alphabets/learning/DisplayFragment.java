@@ -67,7 +67,7 @@ public class DisplayFragment extends Fragment {
                 Toast.makeText(getActivity(),
                         "Added: " + dbHelper.getAlphabetLetterAddedTimes(languageIdentifier, alphabetLetters[position]),
                         Toast.LENGTH_SHORT).show();
-                dbHelper.addOneTime(languageIdentifier, alphabetLetters[position]);
+                dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetters[position]);
                 return false;
             }
         });
@@ -103,7 +103,7 @@ public class DisplayFragment extends Fragment {
                 Toast.makeText(getActivity(),
                         "Added: " + dbHelper.getAlphabetLetterAddedTimes(languageIdentifier, alphabetLetters[position]),
                         Toast.LENGTH_SHORT).show();
-                dbHelper.addOneTime(languageIdentifier, alphabetLetters[position]);
+                dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetters[position]);
                 return true;
             }
         });

@@ -9,9 +9,6 @@ import android.util.Log;
 
 import leon.languages.alphabets.helper.GeneralHelper;
 
-/**
- * Created by Leon on 8/23/2015.
- */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static String LOG_TAG = DatabaseHelper.class.getSimpleName();
@@ -217,7 +214,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                                                   String[] alphabetLettersPart1,
                                                   String[] alphabetLettersPart2) {
         String createAlphabetTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " ( " +
-                alphabetLetterId + " INTEGER PRIMARY KEY, " +
+                alphabetLetterId + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 alphabetLetterColumnName + " TEXT IDENTITY, " +
                 alphabetAddedTimesColumnName + " INTEGER DEFAULT 0)";
         Log.v(LOG_TAG, "createAlphabetTableQuery: " + createAlphabetTableQuery);
@@ -271,7 +268,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return -1;
     }
 
-    public boolean addOneTime(String languageIdentifier, String letter) {
+    public boolean addToReviewNoteBook(String languageIdentifier, String letter) {
         if (languageIdentifier != null) {
             SQLiteDatabase db = this.getWritableDatabase();
             int addedTimes = getAlphabetLetterAddedTimes(languageIdentifier, letter);
