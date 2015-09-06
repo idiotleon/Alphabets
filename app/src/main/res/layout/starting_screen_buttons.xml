@@ -27,6 +27,10 @@
                 android:id="@+id/btn_test_mainactivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+<<<<<<< HEAD
+                android:layout_weight="1"
+=======
+>>>>>>> master
                 android:fontFamily="silom-regular"
                 android:layout_weight="1"
                 android:text="@string/btn_test_mainactivity_text" />
@@ -35,6 +39,10 @@
                 android:id="@+id/btn_review_mainactivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+<<<<<<< HEAD
+                android:layout_weight="1"
+=======
+>>>>>>> master
                 android:fontFamily="silom-regular"
                 android:layout_weight="1"
                 android:text="@string/btn_review_mainactivity_text" />
@@ -43,6 +51,10 @@
                 android:id="@+id/btn_score_mainactivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+<<<<<<< HEAD
+                android:layout_weight="1"
+=======
+>>>>>>> master
                 android:fontFamily="silom-regular"
                 android:layout_weight="1"
                 android:text="@string/btn_score_mainactivity_text" />
@@ -51,6 +63,10 @@
                 android:id="@+id/btn_exit_mainactivity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+<<<<<<< HEAD
+                android:layout_weight="1"
+=======
+>>>>>>> master
                 android:fontFamily="silom-regular"
                 android:layout_weight="1"
                 android:text="@string/btn_exit_mainactivity_text" />

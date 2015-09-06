@@ -58,6 +58,7 @@ public class LanguageInfo {
             "ق", "ك", "ل", "م", "ن",
             "ه", "و", "ي"
     };
+
     public static String[] arabicAlphabetRightToLeft = {
             "ج", "ث ", "ت", "ب", "ا",
             "ر", "ذ", "د", "خ", "ح",
