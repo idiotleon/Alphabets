@@ -3,20 +3,26 @@ package leon.languages.alphabets.learning;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import leon.languages.alphabets.database.DatabaseHelper;
 import leon.languages.alphabets.helper.CommonConstants;
+=======
+import leon.languages.alphabets.GeneralHelper;
+import leon.languages.alphabets.others.CommonConstants;
+>>>>>>> master
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.gridview.CustomAlphabetLettersGridViewAdapter;
 import leon.languages.alphabets.helper.GeneralHelper;
@@ -90,9 +96,13 @@ public class DisplayFragment extends Fragment {
         getActivity().startService(audioPlayIntent);
     }
 
+<<<<<<< HEAD
     private void displaySingleAlphabetDialog(Context context, final String languageIdentifier, final int position) {
+=======
+    private void displaySingleAlphabetDialog(Context context, final int position) {
+>>>>>>> master
         final Dialog displayDialog = new Dialog(context);
-        displayDialog.setContentView(R.layout.dialog_box_how_to_write);
+/*        displayDialog.setContentView(R.layout.dialog_box_how_to_write);
         displayDialog.setTitle("How to write:");
         TextView textView = (TextView) displayDialog.findViewById(R.id.textview_dialog_box_how_to_write);
         textView.setGravity(Gravity.CENTER);
@@ -109,14 +119,47 @@ public class DisplayFragment extends Fragment {
         textView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+<<<<<<< HEAD
                 Toast.makeText(getActivity(),
                         "Added: " + dbHelper.getAlphabetLetterAddedTimes(languageIdentifier, alphabetLetters[position]),
                         Toast.LENGTH_SHORT).show();
                 dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetters[position]);
+=======
+                GeneralHelper.addToReviewNoteBook(alphabetLetters[position]);
+                Toast.makeText(getActivity(), "Added", Toast.LENGTH_SHORT).show();
+>>>>>>> master
+                return true;
+            }
+        });*/
+
+        displayDialog.setContentView(R.layout.dialog_box_how_to_write_imageview);
+
+        ImageView imageView = (ImageView) displayDialog.findViewById(R.id.imageview_dialog_box_how_to_write);
+        imageView.setBackgroundResource(R.drawable.hindi_ch_animation);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayDialog.dismiss();
+            }
+        });
+
+<<<<<<< HEAD
+        displayDialog.show();
+    }
+=======
+        imageView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                GeneralHelper.addToReviewNoteBook(alphabetLetters[position]);
                 return true;
             }
         });
 
+        AnimationDrawable frameAnimation = (AnimationDrawable) imageView.getBackground();
+        frameAnimation.start();
+
         displayDialog.show();
     }
+
+>>>>>>> master
 }

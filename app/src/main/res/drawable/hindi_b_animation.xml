@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hindi_b_animation"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/alphabet_blank"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/hindi_b_1_1"
+        android:duration="70" />
+    <item
+        android:drawable="@drawable/hindi_b_1_2"
+        android:duration="70" />
+    <item
+        android:drawable="@drawable/hindi_b_1_3"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/hindi_b_2_1"
+        android:duration="70" />
+    <item
+        android:drawable="@drawable/hindi_b_2_2"
+        android:duration="70" />
+    <item
+        android:drawable="@drawable/hindi_b_2_3"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/hindi_b_3_1"
+        android:duration="70" />
+    <item
+        android:drawable="@drawable/hindi_b_3_2"
+        android:duration="70" />
+    <item
+        android:drawable="@drawable/hindi_b_3_3"
+        android:duration="300" />
+    <item
+        android:drawable="@drawable/hindi_b_4"
+        android:duration="300" />
+
+</animation-list>
