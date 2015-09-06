@@ -1,4 +1,4 @@
-package leon.languages.alphabets.listview;
+package leon.languages.alphabets.leftdrawer;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,7 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import leon.languages.alphabets.CommonConstants;
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.database.LanguageInfo;
 

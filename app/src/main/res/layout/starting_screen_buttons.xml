@@ -10,53 +10,52 @@
         android:layout_height="match_parent">
 
         <!-- Layout of buttons should be improved a lot!!!!!-->
-        <RelativeLayout
-            android:layout_width="240sp"
-            android:layout_height="360sp"
-            android:layout_gravity="center">
-
-            <Button
-                android:id="@+id/btn_review_mainactivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="@string/btn_review_mainactivity_text" />
-
-            <Button
-                android:id="@+id/btn_test_mainactivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/btn_review_mainactivity"
-                android:layout_centerHorizontal="true"
-                android:text="@string/btn_test_mainactivity_text" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_start_mainactivity"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@id/btn_test_mainactivity"
-                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="silom-regular"
                 android:text="@string/btn_start_mainactivity_text" />
 
+            <Button
+                android:id="@+id/btn_test_mainactivity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="silom-regular"
+                android:layout_weight="1"
+                android:text="@string/btn_test_mainactivity_text" />
+
+            <Button
+                android:id="@+id/btn_review_mainactivity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="silom-regular"
+                android:layout_weight="1"
+                android:text="@string/btn_review_mainactivity_text" />
 
             <Button
                 android:id="@+id/btn_score_mainactivity"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_review_mainactivity"
-                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"
+                android:fontFamily="silom-regular"
+                android:layout_weight="1"
                 android:text="@string/btn_score_mainactivity_text" />
 
             <Button
                 android:id="@+id/btn_exit_mainactivity"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btn_score_mainactivity"
-                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"
+                android:fontFamily="silom-regular"
+                android:layout_weight="1"
                 android:text="@string/btn_exit_mainactivity_text" />
+        </LinearLayout>
 
-        </RelativeLayout>
     </FrameLayout>
 
     <ListView

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/alphabet_part1"
+        android:orderInCategory="100"
+        android:title="@string/menu_alphabet_part1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/alphabet_part2"
+        android:orderInCategory="100"
+        android:title="@string/menu_alphabet_part2"
+        app:showAsAction="always" />
+
+    <!--<item-->
+        <!--android:id="@+id/alphabet_part3"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/menu_alphabet_part3"-->
+        <!--app:showAsAction="always" />-->
+
+</menu>

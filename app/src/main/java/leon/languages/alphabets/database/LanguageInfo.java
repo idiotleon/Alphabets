@@ -124,7 +124,6 @@ public class LanguageInfo {
             "Т/т", "Ф/ф", "Х/х", "Ц/ц", "Ч/ч", "Ш/ш", "Щ/щ"
     };
 
-
     public static String[] spanishAlphabetUppercase = {
             "A", "B", "C", "CH", "D", "E", "F", "G", "H", "I",
             "J", "K", "L", "LL", "M", "N", "Ñ", "O", "P", "Q", "R",
@@ -202,7 +201,6 @@ public class LanguageInfo {
             R.raw.korean_vowel_we1, R.raw.korean_vowel_ue, R.raw.korean_vowel_jo, R.raw.korean_vowel_u, R.raw.korean_vowel_we2,
             R.raw.korean_vowel_we, R.raw.korean_vowel_y, R.raw.korean_vowel_ju, R.raw.korean_vowel_w, R.raw.korean_vowel_wi,
             R.raw.korean_vowel_i
-
     };
 
     public static String[] koreanConsonantLetters = {
@@ -250,6 +248,16 @@ public class LanguageInfo {
             "प", "फ", "ब", "भ", "म",
             "य", "र", "ल", "व", "श",
             "ष", "स", "ह"
+    };
+
+    public static int[] hindiConsonantsAnimationUrl = {
+            R.drawable.hindi_b_animation, R.drawable.hindi_bh_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation,
+            R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation,
+            R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation,
+            R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation,
+            R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation,
+            R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation,
+            R.drawable.hindi_b_animation, R.drawable.hindi_b_animation, R.drawable.hindi_b_animation
     };
 
     public static int[] hindiConsonantsAudioUrl = {
