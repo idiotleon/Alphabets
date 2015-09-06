@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".startingscreen.StartingScreenListViewActivity"
+            android:name=".startingscreen.StartingScreenButtonActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".test.AlphabetTestActivity" />
-        <activity android:name=".preference.SharedPreferenceActivity" />
+        <activity android:name=".preference.AlphabetPreferenceActivity" />
         <activity
             android:name=".learning.AlphabetLearningActivity"
             android:uiOptions="splitActionBarWhenNarrow" />

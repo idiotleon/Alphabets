@@ -9,6 +9,6 @@ import android.preference.PreferenceActivity;
  * lanugage of the app;
  * language of the names of languages on the drawer, in native or English
  */
-public class SharedPreferenceActivity extends PreferenceActivity {
+public class AlphabetPreferenceActivity extends PreferenceActivity {
 
 }
