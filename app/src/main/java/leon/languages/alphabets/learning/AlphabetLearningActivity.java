@@ -85,24 +85,28 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.englishAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "English Alphabet Uppercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "English");
                     getActionBar().setSubtitle("Uppercaset");
                     break;
                 case "French":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.frenchAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "French Alphabet Uppercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "French");
                     getActionBar().setSubtitle("Uppercaset");
                     break;
                 case "German":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.germanAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "German Alphabet Uppercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "German");
                     getActionBar().setSubtitle("Uppercaset");
                     break;
                 case "Greek":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.greekAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Greek Alphabet Uppercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Greek");
                     getActionBar().setSubtitle("Uppercaset");
                     setBackgroundImage(R.mipmap.greekalphabetheader, R.mipmap.greecebackgroundimage, 50);
                     break;
@@ -110,12 +114,14 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.hindiVowelLetters);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Hindi Vowel Letters");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Hindi");
                     getActionBar().setSubtitle("Hindi Vowel Letters");
                     break;
                 case "Hebrew":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.hebrewAlphabetRightToLeft);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Hebrew Alphabet Letters");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Hebrew");
                     getActionBar().setSubtitle("Hebrew Vowel Letters");
 //                introduction = "  The Hebrew alphabet has 22 letters. " +
 //                        "It does not have case, but five letters have different forms when used at the end of a word. " +
@@ -128,12 +134,14 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.hiragana);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, LanguageInfo.japaneseAudioUrl);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Japanese Hiragana");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Japnanese");
                     getActionBar().setSubtitle("Hiragana");
                     break;
                 case "Korean":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.koreanVowelLetters);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, LanguageInfo.koreanVowelsAudioUrls);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Korean Vowel Letters");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Korean");
                     getActionBar().setSubtitle("Korean Vowel Letters");
 //                introduction = "  The Korean alphabet contains 14 consonant letters and 10 vowel letters.  " +
 //                        "Instead of being written sequentially like the letters of the Latin alphabet, " +
@@ -146,12 +154,14 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.russianAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Russian Alphabet Uppercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Russian");
                     getActionBar().setSubtitle("Uppercaset");
                     break;
                 case "Spanish":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.spanishAlphabetUppercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Spanish Alphabet Uppercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Spanish");
                     getActionBar().setSubtitle("Uppercaset");
                     break;
             }
@@ -161,23 +171,27 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, null);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, null);
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Arabic");
                     break;
                 case "English":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.englishAlphabetLowercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "English Alphabet Lowercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "English");
                     getActionBar().setSubtitle("Lowercase");
                     break;
                 case "French":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.frenchAlphabetLowercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "French Alphabet Lowercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "French");
                     getActionBar().setSubtitle("Lowercase");
                     break;
                 case "German":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.germanAlphabetLowercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "German Alphabet Lowercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "German");
                     getActionBar().setSubtitle("Lowercase");
                     break;
                 case "Greek":
@@ -185,18 +199,21 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Greek Alphabet Lowercase");
                     setBackgroundImage(R.mipmap.greekalphabetheader, R.mipmap.greecebackgroundimage, 50);
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Greek");
                     getActionBar().setSubtitle("Lowercase");
                     break;
                 case "Hindi":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.hindiConsonantLetters);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Hindi Consonant Letters");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Hindi");
                     getActionBar().setSubtitle("Hindi Consonant Letters");
                     break;
                 case "Hebrew":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, null);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, null);
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Hebrew");
                     getActionBar().setSubtitle("Hebrew Consonant Letters");
 //                introduction = "  The Hebrew alphabet has 22 letters. " +
 //                        "It does not have case, but five letters have different forms when used at the end of a word. " +
@@ -209,12 +226,14 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.katagana);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, LanguageInfo.japaneseAudioUrl);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Japanese Katagana");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Japanese");
                     getActionBar().setSubtitle("Katagana");
                     break;
                 case "Korean":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.koreanConsonantLetters);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, LanguageInfo.koreanConsonantsAudioUrls);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Korean Consonant Letters");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Korean");
                     getActionBar().setSubtitle("Korean Consonant Letters");
 //                introduction = "  The Korean alphabet contains 14 consonant letters and 10 vowel letters.  " +
 //                        "Instead of being written sequentially like the letters of the Latin alphabet, " +
@@ -227,12 +246,14 @@ public class AlphabetLearningActivity extends FragmentActivity {
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.russianAlphabetLowercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Russian Alphabet Lowercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Russian");
                     getActionBar().setSubtitle("Lowercase");
                     break;
                 case "Spanish":
                     args.putStringArray(CommonConstants.ALPHABET_LETTER_IDENTIFIER, LanguageInfo.spanishAlphabetLowercase);
                     args.putIntArray(CommonConstants.ALPHABET_LETTER_AUDIO_IDENTIFIER, null);
                     args.putString(CommonConstants.ALPHABET_FRAGMENT_TITLE_IDENTIFIER, "Spanish Alphabet Lowercase");
+                    args.putString(CommonConstants.LANGUAGE_IDENTIFER, "Spanish");
                     getActionBar().setSubtitle("Lowercase");
                     break;
             }

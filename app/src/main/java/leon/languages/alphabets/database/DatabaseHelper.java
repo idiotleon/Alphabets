@@ -49,30 +49,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static String HEBREW_ALPHABET_LETTER = "hebrew_alphabet_letter";
     public static String HEBREW_ALPHABET_ADDED_TIMES = "hebrew_alphabet_added_times";
 
-
     public static String GREEK_ALPHABET_TABLE_NAME = "greek_alphabet_table";
     public static String GREEK_ALPHABET_ID = "greek_alphabet_id";
     public static String GREEK_ALPHABET_LETTER = "greek_alphabet_letter";
     public static String GREEK_ALPHABET_ADDED_TIMES = "greek_alphabet_added_times";
-
 
     public static String KOREAN_ALPHABET_TABLE_NAME = "korean_alphabet_table";
     public static String KOREAN_ALPHABET_ID = "korean_alphabet_id";
     public static String KOREAN_ALPHABET_LETTER = "korean_alphabet_letter";
     public static String KOREAN_ALPHABET_ADDED_TIMES = "korean_alphabet_added_times";
 
-
     public static String HINDI_ALPHABET_TABLE_NAME = "hindi_alphabet_table";
     public static String HINDI_ALPHABET_ID = "hindi_alphabet_id";
     public static String HINDI_ALPHABET_LETTER = "hindi_alphabet_letter";
     public static String HINDI_ALPHABET_ADDED_TIMES = "hindi_alphabet_added_times";
 
-
     public static String JAPANESE_ALPHABET_TABLE_NAME = "japanese_alphabet_table";
     public static String JAPANESE_ALPHABET_ID = "japanese_alphabet_id";
     public static String JAPANESE_ALPHABET_LETTER = "japanese_alphabet_letter";
     public static String JAPANESE_ALPHABET_ADDED_TIMES = "japanese_alphabet_added_times";
-
 
     public static String RUSSIAN_ALPHABET_TABLE_NAME = "russian_alphabet_table";
     public static String RUSSIAN_ALPHABET_ID = "russian_alphabet_id";
@@ -90,33 +85,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             GREEK_ALPHABET_TABLE_NAME, KOREAN_ALPHABET_TABLE_NAME, HINDI_ALPHABET_TABLE_NAME, JAPANESE_ALPHABET_TABLE_NAME,
             RUSSIAN_ALPHABET_TABLE_NAME};
 
-    public static String[] ALPHABET_ID_ARRAY = {ARABIC_ALPHABET_ID, GERMAN_ALPHABET_ID,
+    public static String[] ALPHABET_ID_COLUMN_ARRAY = {ARABIC_ALPHABET_ID, GERMAN_ALPHABET_ID,
             ENGLISH_ALPHABET_ID, SPANISH_ALPHABET_ID, FRENCH_ALPHABET_ID, HEBREW_ALPHABET_ID,
             GREEK_ALPHABET_ID, KOREAN_ALPHABET_ID, HINDI_ALPHABET_ID, JAPANESE_ALPHABET_ID,
             RUSSIAN_ALPHABET_ID};
 
-    public static String[] ALPHABET_LETTER_ARRAY = {ARABIC_ALPHABET_LETTER, GERMAN_ALPHABET_LETTER,
+    public static String[] ALPHABET_LETTER_COLUMN_ARRAY = {ARABIC_ALPHABET_LETTER, GERMAN_ALPHABET_LETTER,
             ENGLISH_ALPHABET_LETTER, SPANISH_ALPHABET_LETTER, FRENCH_ALPHABET_LETTER, HEBREW_ALPHABET_LETTER,
             GREEK_ALPHABET_LETTER, KOREAN_ALPHABET_LETTER, HINDI_ALPHABET_LETTER, JAPANESE_ALPHABET_LETTER,
             RUSSIAN_ALPHABET_LETTER};
 
-    public static String[] ALPHABET_ADDED_TIMES_ARRAY = {ARABIC_ALPHABET_ADDED_TIMES, GERMAN_ALPHABET_ADDED_TIMES,
+    public static String[] ALPHABET_ADDED_TIMES_COLUMN_ARRAY = {ARABIC_ALPHABET_ADDED_TIMES, GERMAN_ALPHABET_ADDED_TIMES,
             ENGLISH_ALPHABET_ADDED_TIMES, SPANISH_ALPHABET_ADDED_TIMES, FRENCH_ALPHABET_ADDED_TIMES,
             HEBREW_ALPHABET_ADDED_TIMES, GREEK_ALPHABET_ADDED_TIMES, KOREAN_ALPHABET_ADDED_TIMES,
             HINDI_ALPHABET_ADDED_TIMES, JAPANESE_ALPHABET_ADDED_TIMES, RUSSIAN_ALPHABET_ADDED_TIMES};
 
     public static String[][] ALPHABET_LETTER_1 = {
             LanguageInfo.arabicAlphabetLeftToRight, LanguageInfo.germanAlphabetUppercase, LanguageInfo.englishAlphabetUppercase,
-            LanguageInfo.spanishAlphabetUppercase, LanguageInfo.spanishAlphabetUppercase, LanguageInfo.frenchAlphabetUppercase,
-            LanguageInfo.hebrewAlphabetRightToLeft, LanguageInfo.greekAlphabetUppercase, LanguageInfo.koreanVowelLetters,
-            LanguageInfo.hindiVowelLetters, LanguageInfo.hiragana, LanguageInfo.russianAlphabetUppercase
+            LanguageInfo.spanishAlphabetUppercase, LanguageInfo.frenchAlphabetUppercase, LanguageInfo.hebrewAlphabetRightToLeft,
+            LanguageInfo.greekAlphabetUppercase, LanguageInfo.koreanVowelLetters, LanguageInfo.hindiVowelLetters,
+            LanguageInfo.hiragana, LanguageInfo.russianAlphabetUppercase
     };
 
     public static String[][] ALPHABET_LETTER_2 = {
-            null, LanguageInfo.germanAlphabetLowercase, LanguageInfo.englishAlphabetLowercase, LanguageInfo.englishAlphabetLowercase,
-            LanguageInfo.spanishAlphabetLowercase, LanguageInfo.spanishAlphabetLowercase, LanguageInfo.frenchAlphabetLowercase,
-            null, LanguageInfo.greekAlphabetLowercase, LanguageInfo.koreanConsonantLetters,
-            LanguageInfo.hindiConsonantLetters, LanguageInfo.katagana, LanguageInfo.russianAlphabetLowercase
+            null, LanguageInfo.germanAlphabetLowercase, LanguageInfo.englishAlphabetLowercase,
+            LanguageInfo.spanishAlphabetLowercase, LanguageInfo.frenchAlphabetLowercase, null,
+            LanguageInfo.greekAlphabetLowercase, LanguageInfo.koreanConsonantLetters, LanguageInfo.hindiConsonantLetters,
+            LanguageInfo.katagana, LanguageInfo.russianAlphabetLowercase
     };
 
     public DatabaseHelper(Context context) {
@@ -129,9 +124,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         for (int i = 0; i < ALPHABET_TABLE_NAME_ARRAY.length; i++) {
             createAndInitializeAlphabetTable(db,
                     ALPHABET_TABLE_NAME_ARRAY[i],
-                    ALPHABET_ID_ARRAY[i],
-                    ALPHABET_LETTER_ARRAY[i],
-                    ALPHABET_ADDED_TIMES_ARRAY[i],
+                    ALPHABET_ID_COLUMN_ARRAY[i],
+                    ALPHABET_LETTER_COLUMN_ARRAY[i],
+                    ALPHABET_ADDED_TIMES_COLUMN_ARRAY[i],
                     ALPHABET_LETTER_1[i],
                     ALPHABET_LETTER_2[i]);
         }
@@ -259,9 +254,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         int index = GeneralHelper.languageIdentifierToIndex(languageIdentifier);
         return queryAlphabetLetterAddedTimes(ALPHABET_TABLE_NAME_ARRAY[index],
-                ALPHABET_LETTER_ARRAY[index],
+                ALPHABET_LETTER_COLUMN_ARRAY[index],
                 letter,
-                ALPHABET_ADDED_TIMES_ARRAY[index]
+                ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index]
         );
     }
 
@@ -271,7 +266,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "SELECT * FROM " + tableName + " WHERE " + letterColumnName + " = " + letter;
         Log.v(LOG_TAG, "queryAlphabetLetterAddedTimes: " + queryAlphabetLetterAddedTimes);
         Cursor cursor = db.rawQuery(queryAlphabetLetterAddedTimes, null);
-        return cursor.getInt(cursor.getColumnIndex(alphabetAddedTimesColumnName));
+        if (cursor != null)
+            return cursor.getInt(cursor.getColumnIndex(alphabetAddedTimesColumnName));
+        else return -1;
     }
 
     public boolean addOneTime(String languageIdentifier, String letter) {
@@ -281,9 +278,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             int index = GeneralHelper.languageIdentifierToIndex(languageIdentifier);
             addedTimes++;
             ContentValues contentValues = new ContentValues();
-            contentValues.put(ALPHABET_LETTER_ARRAY[index], letter);
-            contentValues.put(ALPHABET_ADDED_TIMES_ARRAY[index], addedTimes);
-            db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_ID_ARRAY[index] + " = ?", new String[]{letter});
+            contentValues.put(ALPHABET_LETTER_COLUMN_ARRAY[index], letter);
+            contentValues.put(ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index], addedTimes);
+            db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_ID_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
             return true;
         }
         return false;
@@ -297,9 +294,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             if (index > 0) {
                 addedTimes--;
                 ContentValues contentValues = new ContentValues();
-                contentValues.put(ALPHABET_LETTER_ARRAY[index], letter);
-                contentValues.put(ALPHABET_ADDED_TIMES_ARRAY[index], addedTimes);
-                db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_ID_ARRAY[index] + " = ?", new String[]{letter});
+                contentValues.put(ALPHABET_LETTER_COLUMN_ARRAY[index], letter);
+                contentValues.put(ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index], addedTimes);
+                db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_ID_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
             }
             return true;
         }
