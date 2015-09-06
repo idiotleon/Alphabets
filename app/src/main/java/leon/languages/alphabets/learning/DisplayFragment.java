@@ -19,6 +19,7 @@ import leon.languages.alphabets.database.DatabaseHelper;
 import leon.languages.alphabets.helper.CommonConstants;
 import leon.languages.alphabets.R;
 import leon.languages.alphabets.gridview.CustomAlphabetLettersGridViewAdapter;
+import leon.languages.alphabets.helper.GeneralHelper;
 import leon.languages.alphabets.multimedia.PlayAudioService;
 
 public class DisplayFragment extends Fragment {
@@ -64,10 +65,18 @@ public class DisplayFragment extends Fragment {
         gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(),
-                        "Added: " + dbHelper.getAlphabetLetterAddedTimes(languageIdentifier, alphabetLetters[position]),
-                        Toast.LENGTH_SHORT).show();
-                dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetters[position]);
+                int addedTimes = dbHelper.getAlphabetLetterAddedTimes(languageIdentifier, alphabetLetters[position]);
+                if(addedTimes == 0 ) {
+                    Toast.makeText(getActivity(),
+                            "Added.",
+                            Toast.LENGTH_SHORT).show();
+                    dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetters[position]);
+                }else{
+                    Toast.makeText(getActivity(),
+                            "Added: ." + addedTimes,
+                            Toast.LENGTH_SHORT).show();
+                    dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetters[position]);
+                }
                 return false;
             }
         });

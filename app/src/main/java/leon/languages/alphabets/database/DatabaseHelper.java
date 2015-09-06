@@ -213,21 +213,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                                                   String alphabetAddedTimesColumnName,
                                                   String[] alphabetLettersPart1,
                                                   String[] alphabetLettersPart2) {
-        String createAlphabetTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " ( " +
+        String createAlphabetTableQuery = "CREATE TABLE IF NOT EXISTS " + tableName + " (" +
                 alphabetLetterId + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 alphabetLetterColumnName + " TEXT IDENTITY, " +
                 alphabetAddedTimesColumnName + " INTEGER DEFAULT 0)";
-        Log.v(LOG_TAG, "createAlphabetTableQuery: " + createAlphabetTableQuery);
+        Log.v(LOG_TAG, "createAlphabetTableQuery, DatabaseHelper: " + createAlphabetTableQuery);
         db.execSQL(createAlphabetTableQuery);
         for (int i = 0; i < alphabetLettersPart1.length; i++) {
             ContentValues contentValues = new ContentValues();
             contentValues.put(alphabetLetterColumnName, alphabetLettersPart1[i]);
+            Log.v(LOG_TAG, "alphabetLettersPart1[i] for initialization of database: " + alphabetLettersPart1[i]);
             db.insert(tableName, null, contentValues);
         }
         if (alphabetLettersPart2 != null) {
             for (int i = 0; i < alphabetLettersPart2.length; i++) {
                 ContentValues contentValues = new ContentValues();
                 contentValues.put(alphabetLetterColumnName, alphabetLettersPart2[i]);
+                Log.v(LOG_TAG, "alphabetLettersPart2[i] for initialization of database: " + alphabetLettersPart1[2]);
                 db.insert(tableName, null, contentValues);
             }
         }
@@ -248,7 +250,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public int getAlphabetLetterAddedTimes(String languageIdentifier, String letter) {
-
         int index = GeneralHelper.languageIdentifierToIndex(languageIdentifier);
         return queryAlphabetLetterAddedTimes(ALPHABET_TABLE_NAME_ARRAY[index],
                 ALPHABET_LETTER_COLUMN_ARRAY[index],
@@ -260,40 +261,50 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private int queryAlphabetLetterAddedTimes(String tableName, String letterColumnName, String letter, String alphabetAddedTimesColumnName) {
         SQLiteDatabase db = this.getReadableDatabase();
         String queryAlphabetLetterAddedTimes =
-                "SELECT * FROM " + tableName + " WHERE " + letterColumnName + " = " + letter;
+                "SELECT * FROM " + tableName + " WHERE " + letterColumnName + " = '" + letter + "'";
         Log.v(LOG_TAG, "queryAlphabetLetterAddedTimes: " + queryAlphabetLetterAddedTimes);
         Cursor cursor = db.rawQuery(queryAlphabetLetterAddedTimes, null);
-        if (cursor != null)
+        if (cursor.getCount() > 0) {
+            cursor.moveToFirst();
             return cursor.getInt(cursor.getColumnIndex(alphabetAddedTimesColumnName));
-        else return -1;
+        } else return -1;
     }
 
     public boolean addToReviewNoteBook(String languageIdentifier, String letter) {
         if (languageIdentifier != null) {
             SQLiteDatabase db = this.getWritableDatabase();
             int addedTimes = getAlphabetLetterAddedTimes(languageIdentifier, letter);
+            Log.v(LOG_TAG, "addedTimes, got from getAlphabetLetterAddedTimes(languageIdentifier, letter), addToReviewNoteBook(): " + addedTimes);
             int index = GeneralHelper.languageIdentifierToIndex(languageIdentifier);
             addedTimes++;
             ContentValues contentValues = new ContentValues();
             contentValues.put(ALPHABET_LETTER_COLUMN_ARRAY[index], letter);
             contentValues.put(ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index], addedTimes);
-            db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_ID_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
+            db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_LETTER_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
             return true;
         }
         return false;
     }
 
-    public boolean minusOneTime(String languageIdentifier, String letter) {
+    public boolean removeFromReviewBook(String languageIdentifier, String letter) {
         if (languageIdentifier != null) {
             SQLiteDatabase db = this.getWritableDatabase();
-            int addedTimes = getAlphabetLetterAddedTimes(languageIdentifier, letter);
             int index = GeneralHelper.languageIdentifierToIndex(languageIdentifier);
+            int addedTimes = getAlphabetLetterAddedTimes(languageIdentifier, letter);
             if (index > 0) {
-                addedTimes--;
-                ContentValues contentValues = new ContentValues();
-                contentValues.put(ALPHABET_LETTER_COLUMN_ARRAY[index], letter);
-                contentValues.put(ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index], addedTimes);
-                db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_ID_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
+                if (addedTimes > 0) {
+                    addedTimes--;
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put(ALPHABET_LETTER_COLUMN_ARRAY[index], letter);
+                    contentValues.put(ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index], addedTimes);
+                    db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_LETTER_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
+                } else {
+                    addedTimes = 0;
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put(ALPHABET_LETTER_COLUMN_ARRAY[index], letter);
+                    contentValues.put(ALPHABET_ADDED_TIMES_COLUMN_ARRAY[index], addedTimes);
+                    db.update(ALPHABET_TABLE_NAME_ARRAY[index], contentValues, ALPHABET_LETTER_COLUMN_ARRAY[index] + " = ?", new String[]{letter});
+                }
             }
             return true;
         }

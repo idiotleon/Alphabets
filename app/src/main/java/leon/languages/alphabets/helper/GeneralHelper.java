@@ -1,9 +1,16 @@
 package leon.languages.alphabets.helper;
 
+import android.content.Context;
+import android.util.Log;
+
+import leon.languages.alphabets.database.DatabaseHelper;
+
 /**
  * Created by Leon on 8/24/2015.
  */
 public class GeneralHelper {
+
+    private static String LOG_TAG = GeneralHelper.class.getSimpleName();
 
     public static int languageIdentifierToIndex(String languageIdentifier) {
         int index = 0;
@@ -44,5 +51,16 @@ public class GeneralHelper {
         }
         return index;
     }
-    
+
+/*    public static void addToReviewBook(Context context, String languageIdentifier, String alphabetLetter) {
+        Log.v(LOG_TAG, "addToReviewBook(), GeneralHelper executed.");
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        dbHelper.addToReviewNoteBook(languageIdentifier, alphabetLetter);
+    }
+
+    public static void removeFromReviewBook(Context context, String languageIdentifier, String alphabetLetter){
+        Log.v(LOG_TAG, "removeFromReviewBook(), GeneralHelper executed.");
+        DatabaseHelper dbHelper = new DatabaseHelper(context);
+        dbHelper.removeFromReviewBook(languageIdentifier, alphabetLetter);
+    }*/
 }

@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="createAlphabetTableQuery" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="DatabaseHelper" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -48,32 +48,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DisplayFragment.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DisplayFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/learning/DisplayFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state vertical-scroll-proportion="4.535809">
+              <caret line="119" column="29" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
               <folding>
-                <element signature="e#2300#2720#0" expanded="true" />
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2768#3301#0" expanded="true" />
-                <element signature="e#3300#3301#0" expanded="true" />
-                <element signature="e#4182#4339#0" expanded="true" />
-                <element signature="e#4338#4339#0" expanded="true" />
-                <element signature="e#4383#4851#0" expanded="true" />
-                <element signature="e#4850#4851#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralHelper.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/helper/GeneralHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50928384">
-              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-              <folding>
-                <element signature="method#languageIdentifierToIndex#0;class#GeneralHelper#0" expanded="false" />
+                <element signature="e#2354#2774#0" expanded="true" />
+                <element signature="e#2773#2774#0" expanded="true" />
+                <element signature="e#2822#3738#0" expanded="true" />
+                <element signature="e#3737#3738#0" expanded="true" />
+                <element signature="e#4619#4776#0" expanded="true" />
+                <element signature="e#4775#4776#0" expanded="true" />
+                <element signature="e#4820#5288#0" expanded="true" />
+                <element signature="e#5287#5288#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -83,11 +71,21 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="215" column="93" selection-start-line="215" selection-start-column="93" selection-end-line="215" selection-end-column="93" />
+              <caret line="272" column="55" selection-start-line="272" selection-start-column="55" selection-end-line="272" selection-end-column="55" />
               <folding>
                 <element signature="e#6803#6804#0" expanded="true" />
                 <element signature="e#6863#6864#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LanguageInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/LanguageInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="150" column="27" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1568,12 +1566,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/others/CommonConstants.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/others/GeneralHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/learning/DisplayFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/learning/AlphabetLearningActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/starting_screen_buttons.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/LanguageInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/helper/GeneralHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/DatabaseHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/learning/DisplayFragment.java" />
       </list>
     </option>
   </component>
@@ -1588,7 +1586,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="742" />
+    <option name="x" value="567" />
     <option name="y" value="4" />
     <option name="width" value="842" />
     <option name="height" value="867" />
@@ -1888,7 +1886,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="LGD800d2604ef6" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.56.101:5555" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_22_x86" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -2099,7 +2097,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="742" y="4" width="842" height="867" extended-state="0" />
+    <frame x="567" y="4" width="842" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2114,10 +2112,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32069972" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="35" y="104" width="606" height="543" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40875912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-51" y="58" width="903" height="787" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40875912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-73" y="37" width="1464" height="793" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4028133" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36189258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32674572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2504,16 +2502,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/LanguageInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33256352">
-          <caret line="334" column="88" selection-start-line="334" selection-start-column="88" selection-end-line="334" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="150" column="27" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/helper/GeneralHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.0332594">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/database/DatabaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="215" column="93" selection-start-line="215" selection-start-column="93" selection-end-line="215" selection-end-column="93" />
+          <caret line="272" column="55" selection-start-line="272" selection-start-column="55" selection-end-line="272" selection-end-column="55" />
           <folding>
             <element signature="e#6803#6804#0" expanded="true" />
             <element signature="e#6863#6864#0" expanded="true" />
@@ -2523,27 +2531,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/learning/DisplayFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state vertical-scroll-proportion="4.535809">
+          <caret line="119" column="29" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
           <folding>
-            <element signature="e#2300#2720#0" expanded="true" />
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#2768#3301#0" expanded="true" />
-            <element signature="e#3300#3301#0" expanded="true" />
-            <element signature="e#4182#4339#0" expanded="true" />
-            <element signature="e#4338#4339#0" expanded="true" />
-            <element signature="e#4383#4851#0" expanded="true" />
-            <element signature="e#4850#4851#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/leon/languages/alphabets/helper/GeneralHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50928384">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="46" selection-end-column="4" />
-          <folding>
-            <element signature="method#languageIdentifierToIndex#0;class#GeneralHelper#0" expanded="false" />
+            <element signature="e#2354#2774#0" expanded="true" />
+            <element signature="e#2773#2774#0" expanded="true" />
+            <element signature="e#2822#3738#0" expanded="true" />
+            <element signature="e#3737#3738#0" expanded="true" />
+            <element signature="e#4619#4776#0" expanded="true" />
+            <element signature="e#4775#4776#0" expanded="true" />
+            <element signature="e#4820#5288#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
           </folding>
         </state>
       </provider>
